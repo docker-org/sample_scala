@@ -2,6 +2,12 @@ language: scala
 
 scala:
     - 2.11.0
+    
+env:
+    #global:
+     - FOO=foo BAR=bar
+     - FOO=bar BAR=foo
+     - secure: gqxKQlb9ee3IU4obHviRBC+cj6tyD2aIBFwaBkTz2vQLYV9T2nDr7nPF3XFKYqrNm2EPhZh/fqpwZABm+dIT9/xsENHfV99R5NsLdvV9dd275PfTJtwzAXZejZyg5oc6RvmlZQGd8Sw5voQq+pN3/xtuetH1Uk48T6D2BK4nRt8PRv27UwRVBFcKlnRDho+kDABf8o8ZKwlnwkt3cD1qTdpQF69KPj02rcl5dVa2PDBggOP8jxuHoMRLWhQd2jvTdkbK1mFS+9KXQ8U4Jikjd0at85DMHGc45QEUQoBP1zvIRz2hfeHMYcHB6TJm3vVXiXIHlPC1mi2ilwjz2XNYRQ== 
 
 script:
   - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
